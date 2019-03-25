@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>倒计时</title>
+	
+</head>
+<body>
+距离2020年1月1日还剩: <span id="t_d"></span>天<span id="t_h"></span>小时<span id="t_m"></span>分钟<span id="t_s"></span>秒
+
+
+</body>
+</html>
+<script type="text/javascript" src="jq.js"></script>
+<script type="text/javascript">
+	function demo()
+	{
+		alert(1);
+		var oldtime = new Date("2020/1/1 00:00:00");
+		var Nowtime = new Date();
+		var time = $oldtime.getTime() - $Nowtime.getTime();
+        var d = Math.floor(time/1000/60/60/24);
+        var h = Math.floor(time/1000/60/60%24);
+        var m = Math.floor(time/1000/60%60);
+        var s = Math.floor(time/1000%60);
+
+        document.getElementById("t_d").innerhtml()= d;
+        document.getElementById("t_h").innerhtml()= h;
+        document.getElementById("t_m").innerhtml()= m;
+        document.getElementById("t_s").innerhtml()= s;
+	}
+     setIntertime(demo(),1000);
+
+</script>
